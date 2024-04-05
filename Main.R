@@ -64,7 +64,7 @@ print(sprintf("Gene 15 - median = %s ; outliers=[%s]", gene_15.median, paste(gen
 #                          accuracy = 0.2)), quote = FALSE);
 
 # 5. - Create boxplot for each Gene with their corresponding expression values.
-boxplot(rna.seq.data.clean, col="cyan")
+boxplot(rna.seq.data.clean, col="cyan", cex.axis=0.8)
 
 # 6. - Create bar plots with the Median value of each Gene's expression.
 all.median <- rna.seq.data.measured["Median",]
@@ -85,4 +85,4 @@ results <- c(rep("disease", 12), rep("health", 18))
 # 7.2 - Create yet another vector based on the results by providing captions which correspond to the rownames of the cleaned-up DF.
 names(results) <-row.names(rna.seq.data.clean);
 # 7.3 - Create the PieChart - consolidate the vector as a table which sums up results per category
-pie(table(results), col=c("red","green"), border="white");
+pie(table(results), col=c("red","green"), border="white", radius=1.06, cex=0.6);
